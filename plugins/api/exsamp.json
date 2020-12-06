@@ -1,0 +1,18 @@
+{
+  "data": {
+    "user": {
+      "id": "76f123b3-a79f-4094-830f-9c807c4df439",
+      "phone": "628787878787",
+      "user_status": "pending",
+      "user_type": "normal_user",
+      "sugar_id": "SG59082",
+      "country": "indonesia",
+      "latlong": null,
+      "user_device": {
+        "device_token": "android",
+        "device_type": "ios",
+        "device_status": "grant"
+      }
+    }
+  }
+}
