@@ -11,10 +11,6 @@ async function ajax(context) {
   }
 }
 
-export default ({ app }, inject) => {
-  inject("api", caller(app));
-};
-
 // url builder
 async function urlBuild() {
   if (this.params) {
@@ -51,3 +47,7 @@ async function caller(app) {
     return ajax.apply(app, [context, endpoints]);
   };
 }
+
+export default ({ app }, inject) => {
+  inject("api", caller(app));
+};

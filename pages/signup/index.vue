@@ -26,6 +26,15 @@
               type="text"
               required
             />
+            <v-text-field
+              v-model="form.country"
+              id="loginFormCountry"
+              label="Country"
+              placeholder="country"
+              prepend-icon="mdi-flag-outline"
+              type="text"
+              required
+            />
             <v-btn
               id="loginFormLoginButton"
               class="orange-gradient btn-login"
@@ -33,7 +42,7 @@
               color="green"
               type="submit"
             >
-              login
+              Signup
             </v-btn>
           </v-form>
         </v-card-text>
@@ -44,13 +53,14 @@
 
 <script>
 export default {
-  name: "login",
+  name: "signup",
   layout: "clean",
 
   data: () => ({
     form: {
       phone: "",
       password: "",
+      country: "",
       message: null,
     },
   }),
@@ -58,13 +68,15 @@ export default {
     async handleLogin() {
       console.log(this.form);
       try {
-        await this.$store.dispatch("auth/authCreate", {
+        await this.$store.dispatch("user/create", {
           data: {
             phone: this.form.phone,
             password: this.form.password,
+            country: this.form.country,
+            latlong: null,
           },
         });
-        // this.$router.push("/profile");
+        // this.$router.push("/bbb");
       } catch (err) {
         this.message = err.message;
       }

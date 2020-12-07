@@ -14,11 +14,11 @@ export default {
       url: "http://pretest-qa.dcidev.id/api/v1/oauth/sign_in"
     },
     otpResend: {
-      method: "POST",
+      method: "post",
       url: "http://pretest-qa.dcidev.id/api/v1/register/otp/request"
     },
     otpMatch: {
-      method: "POST",
+      method: "post",
       url: "http://pretest-qa.dcidev.id/api/v1/register/otp/match"
     }
   },

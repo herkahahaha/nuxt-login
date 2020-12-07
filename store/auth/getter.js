@@ -1,3 +1,5 @@
 export default {
-  getUser: state => state.user
+  getUserData: state => state.userData,
+  getUserToken: state => state.userToken,
+  getUserTokenRefresh: state => state.userTokenRefresh
 };
